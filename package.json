@@ -1,19 +1,11 @@
 ﻿{
-    "name": "ax5ui-kernel",
+    "name": "ax5ui-quick-start",
     "version": "0.0.1",
     "engines": {
         "node": ">=0.10.0"
     },
     "dependencies": {
-        "ax5core": "",
-        "ax5ui-calendar": "",
-        "ax5ui-dialog": "",
-        "ax5ui-formatter": "",
-        "ax5ui-mask": "",
-        "ax5ui-menu": "",
-        "ax5ui-modal": "",
-        "ax5ui-picker": "",
-        "ax5ui-toast": ""
+
     },
     "scripts": {
         "build": "babel src -d lib"
