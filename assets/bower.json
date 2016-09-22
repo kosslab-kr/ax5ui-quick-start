@@ -1,27 +1,10 @@
 {
-    "name": "ax5doc-assets",
-    "dependencies": {
-        "jquery": "^1.11.0",
-        "bootstrap-sass": "",
-        "bourbon": "",
-        "font-awesome": "",
-        "ax5core": "",
-        "ax5ui-dialog": "",
-        "ax5ui-mask": "",
-        "ax5ui-toast": "",
-        "ax5ui-modal": "",
-        "ax5ui-calendar": "",
-        "ax5ui-picker": "",
-        "ax5ui-formatter": "",
-        "ax5ui-menu": "",
-        "ax5ui-select": "",
-        "ax5ui-grid": "",
-        "ax5ui-media-viewer": "",
-        "ax5ui-uploader": "",
-        "ax5ui-combobox": "",
-        "ax5ui-layout": "",
-        "ax5ui-binder": "",
-        "ax5ui-multi-uploader": "",
-        "ax5ui-autocomplete": ""
-    }
+  "name": "ax5doc-assets",
+  "dependencies": {
+    "jquery": "^1.11.0",
+    "bootstrap-sass": "",
+    "bourbon": "",
+    "font-awesome": "",
+    "bootstrap": "^3.3.7"
+  }
 }

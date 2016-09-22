@@ -3,15 +3,8 @@ exports.render = function (input, out) {
     var Finder = require('fs-finder');
     var htmlparser = require("htmlparser");
 
-    var projectName = input.projectName;
     var loadFilePath, hrefRoot;
-
-    if (projectName == "ax5ui") {
-
-    }
-    else {
-        loadFilePath = "_src_/" + projectName, hrefRoot = "_src_/";
-    }
+        loadFilePath = "_src_", hrefRoot = "_src_/";
 
     if (loadFilePath) {
 

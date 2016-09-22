@@ -1,6 +1,9 @@
 // 변수만 사용할 경우
 // @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss";
-@import "../lib/ax5uicon/style.css";
+
+$icomoon-font-path: "../lib/ax-icon/fonts";
+@import "../lib/ax-icon/variables";
+@import "../lib/ax-icon/style.scss";
 
 /* {{ -------------------- Bootstrap variables */
 
@@ -97,8 +100,8 @@ $screen-md-max: ($screen-lg-min - 1) !default;
 $break-mobilewide-width: 650px;
 $break-desktop-width: 950px;
 
-@import "node_modules/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
-@import "node_modules/bourbon/app/assets/stylesheets/_bourbon.scss";
+@import "../../assets/lib/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+@import "../../assets/lib/bourbon/app/assets/stylesheets/_bourbon.scss";
 @import "docs/bootstrap-custom";
 @import "docs/utils";
 

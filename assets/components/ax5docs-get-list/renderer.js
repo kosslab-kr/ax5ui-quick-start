@@ -6,12 +6,7 @@ exports.render = function (input, out) {
     var projectName = input.projectName;
     var loadFilePath, hrefRoot;
 
-    if (projectName == "ax5ui") {
-
-    }
-    else {
-        loadFilePath = "_src_/" + projectName, hrefRoot = "_src_/";
-    }
+        loadFilePath = "_src_", hrefRoot = "_src_/";
 
     if (loadFilePath) {
 
