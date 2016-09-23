@@ -156,9 +156,14 @@ $(document.body).ready(function () {
             "docs-foot": $("#docs-foot"),
             "docs-inline-menu": $("#docs-inline-menu"),
             "docs-menu": $("#docs-menu"),
-            "docs-menu-parent": $("#docs-menu").parent()
+            "docs-menu-parent": $("#docs-menu").parent(),
+            "docs-navbar-collapse": $("#docs-navbar-collapse")
         }
     })();
+
+    $(document.body).on("click", "#mobile-menu", function () {
+        fn_docs._jos["docs-navbar-collapse"].toggleClass("open-in-mobile");
+    });
 
     var menuParentTop = 0;
     $(window).on('load resize', function () {
