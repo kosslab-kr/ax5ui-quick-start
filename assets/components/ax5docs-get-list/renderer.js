@@ -6,7 +6,7 @@ exports.render = function (input, out) {
     var projectName = input.projectName;
     var loadFilePath, hrefRoot;
 
-        loadFilePath = "_src_", hrefRoot = "_src_/";
+    loadFilePath = "_src_", hrefRoot = "_src_/";
 
     if (loadFilePath) {
 
@@ -16,7 +16,7 @@ exports.render = function (input, out) {
         });
 
         var url_replace = function (url) {
-            return url.replace(process.cwd() + "/" + hrefRoot, "/");
+            return url.substring(url.indexOf("_src_") + 5);
         };
 
         var menus = [], trees = [];
@@ -29,7 +29,8 @@ exports.render = function (input, out) {
 
                     var
                         rawHtml = fs.readFileSync(src, 'utf8'),
-                        handler = new htmlparser.DefaultHandler(function (error) {}, {verbose: false, ignoreWhitespace: true}),
+                        handler = new htmlparser.DefaultHandler(function (error) {
+                        }, {verbose: false, ignoreWhitespace: true}),
                         parser = new htmlparser.Parser(handler)
                         ;
 
@@ -89,7 +90,7 @@ exports.render = function (input, out) {
                 }
             });
         })();
-        
+
         // console.log(trees);
 
         var getUrl = function (url) {
