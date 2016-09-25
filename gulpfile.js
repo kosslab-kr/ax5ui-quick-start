@@ -22,7 +22,8 @@ var PATHS = {
         css_src: "assets/css",
         css_dest: "assets/css",
         doc_src: "_src_",
-        doc_dest: "."
+        doc_dest: ".",
+        doc_doc:"test_teamDOC"
     }
 };
 
@@ -53,7 +54,8 @@ gulp.task('docs-marko', function () {
             projectName: "ax5ui",
             layoutPath: PATHS.assets.src + '/_layouts/root.marko',
             layoutModalPath: PATHS.assets.src + '/_layouts/modal.marko',
-            kernelPath: PATHS.kernel
+            kernelPath: PATHS.kernel,
+            mdpath: PATHS.ax5docs.doc_doc,
         }))
         .pipe(gulp.dest(PATHS['ax5docs'].doc_dest));
 });
