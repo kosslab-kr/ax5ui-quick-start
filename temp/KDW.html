@@ -145,41 +145,57 @@
         <h1>TestPage/KDW.</h1>
 
 
-        <p>#BOJ, 12784</p>
-<pre class="prettyprint linenums lang-js"><code>#include&lt;stdio.h&gt;
-#include&lt;algorithm&gt;
-#include&lt;vector&gt;
-using namespace std;
-int T, n, m;
-vector&lt;vector&lt;pair&lt;int, int&gt;&gt;&gt; adj;
-int dfs(int h,int p) {
-    if (h!=1&amp;&amp;adj[h].size()==1) return adj[h][0].second;
-    int ret = 0;
-    for (auto&amp; e : adj[h]) {
-        if(e.first==p) continue;
-        ret+=min(e.second,dfs(e.first,h));
-    }
-    return ret;
-}
-int main() {
-    scanf(&quot;%d&quot;, &amp;T);
-    while (T--) {
-        scanf(&quot;%d %d&quot;, &amp;n, &amp;m);
-        adj.clear();
-        adj.resize(n+1);
-        for (int i = 0; i&lt;m; ++i) {
-            int u, v, w;
-            scanf(&quot;%d %d %d&quot;, &amp;u, &amp;v, &amp;w);
-            adj[u].push_back({v,w});
-            adj[v].push_back({u,w});
-        }
-        printf(&quot;%d\n&quot;, dfs(1, 0));
-    }
-}
+        <h2>What is npm?</h2>
+<p>npm makes it easy for JavaScript developers to share and reuse code, and it makes it easy to update the code that you`re sharing.</p>
+<p>if you need npm click <a href="https://www.npmjs.com/">here</a></p>
+<p>###npm install</p>
+<p>command this instruction</p>
+<pre><code>npm install
 </code></pre>
+<p>After npm installation, type this instruction</p>
+<pre><code>npm install -g gulp
+</code></pre>
+<p>after that, type this instruction</p>
+<pre><code>gulp default
+</code></pre>
+<p>then, you can see this message</p>
+<pre><code>[20:19:34] Using gulpfile c:\path..
+[20:19:34] Starting `default'...
+[20:19:34] Finished 'default' after 66ms
+</code></pre>
+<p>But, if you use windows, it would’t be work properly.
+in this case, type this instruction</p>
+<pre><code>gulp watching
+</code></pre>
+<p><code>if you fail to run gulp, please try again from the npm install</code></p>
 
 
+<head>
+        <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/ax5ui/ax5ui-calendar/master/dist/ax5calendar.css">
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+  <script type="text/javascript" src="https://cdn.rawgit.com/ax5ui/ax5core/master/dist/ax5core.min.js"></script>
+  <script type="text/javascript" src="https://cdn.rawgit.com/ax5ui/ax5ui-calendar/master/dist/ax5calendar.min.js"></script>
 
+  <script type="text/javascript">
+    $(document.body).ready(function () {
+        var myCalendar = new ax5.ui.calendar({
+            target: document.getElementById("calendar-target"),
+            displayDate: (new Date()),
+            onClick: function () {
+                console.log(this);
+                console.log(myCalendar.getSelection());
+            },
+            onStateChanged: function () {
+                console.log(this);
+            }
+        });
+    });
+</script>
+</head>
+<body>
+  <div id="calendar-target" style="&#10;                  width:300px;&#10;                  border:1px solid #ccc;&#10;                  border-radius: 5px;&#10;                  padding: 5px;&#10;                  overflow: hidden;"> 
+  </div>
+</body>
     
                     </div>
                 </div>

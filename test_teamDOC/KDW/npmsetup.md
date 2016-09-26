@@ -3,9 +3,10 @@ npm makes it easy for JavaScript developers to share and reuse code, and it make
 
 if you need npm click [here](https://www.npmjs.com/)
 
-<hr/>
 ###npm install
-command this instruction 
+
+command this instruction
+
 ```
 npm install
 ```
@@ -31,7 +32,3 @@ gulp watching
 ```
 
 `if you fail to run gulp, please try again from the npm install`
-
-
-
-
