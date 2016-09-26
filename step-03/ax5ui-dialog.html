@@ -101,7 +101,7 @@
                         <ul class="nav navbar-nav" id="docs-menu-print-target">
                             
                             
-                                <li class='active'><a href="\step-01\index.html">Step.01</a></li><li ><a href="\step-02\index.html">Step.02</a></li><li ><a href="\step-03\ax5ui-dialog.html">Temp</a></li><li ><a href="\step-03\Ma.html">Step-03</a></li>
+                                <li ><a href="\step-01\index.html">Step.01</a></li><li ><a href="\step-02\index.html">Step.02</a></li><li class='active'><a href="\step-03\ax5ui-dialog.html">Temp</a></li><li ><a href="\step-03\Ma.html">Step-03</a></li>
                             
                         </ul>
 
@@ -122,8 +122,8 @@
         
         <div class="contents">
             <div class="style-sub-visual">
-                <div class="title">Test</div>
-                <div class="description">AX5UI의 설치에 대해 알아봅시다.</div>
+                <div class="title">ax5ui-dialog</div>
+                <div class="description">TestPage</div>
             </div>
         </div>
     
@@ -135,94 +135,96 @@
                     <div class="col-md-3">
                         <div class="docs-menu" id="docs-menu">
                             <div class="docs-menu-scroll">
-                                <ul><li ><a href="\step-01\index.html">Install</a></li><li  class='active'><a href="\step-01\test.html">Test</a></li><li ><a href="\step-01\How to install.html">How To Install</a></li></ul>
+                                <ul><li  class='active'><a href="\step-03\ax5ui-dialog.html">ax5ui-dialog</a></li><li ><a href="\step-03\ax5ui-mask.html">ax5ui-mask</a></li><li ><a href="\temp\ax5ui-mask.html">ax5ui-mask</a></li></ul>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-9">
                         
 
-        <h1>소스코드와 설명 하기.</h1>
+        <h1>ax5ui-mask</h1>
 
 
-        <h1>Formatter</h1>
-<p>formatter는 컬럼의 출력 될 값을 미리 정의된 함수명 또는 사용자가 직접 정의한 함수의 리턴값으로 대체하여 출력하는 컬럼의 속성을 말합니다.
-<code>ax5.ui.grid.formatter</code> 오브젝트 안에 미리 정의된 함수들이 담겨 있습니다. 기본 정의된 formatter함수는 <code>money</code>입니다.
-사용자가 <code>formatter</code>를 확장하고 싶다면, 그리드 실행전에. 다음의 코드를 추가 하시면 됩니다.</p>
-<pre class="prettyprint linenums lang-js"><code>// capital formatter 추가
-ax5.ui.grid.formatter[&quot;capital&quot;] = function(){
-// console.log(this);
-return this.value.toUpperCase();
-}
-</code></pre>
-<h3>formatter this</h3>
-<p>formatter 함수에 this는 다음과 같습니다. 최종 return 의 값을 사용 하므로 자유롭게 프로그래밍 할 수 있습니다.</p>
-<pre><code>{key: &quot;c&quot;, value: 3000, index: 5, item: Object, list: Array[6]}
-</code></pre>
-<p><strong>Paste the following code into the <code>head</code> section of your site’s HTML.</strong></p>
-<pre class="prettyprint linenums lang-html"><code>&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.rawgit.com/ax5ui/ax5ui-grid/master/dist/ax5grid.css&quot;&gt;
+        <h2>Basic Usage</h2>
+<p>When you click the button below, you can put a semi-transparent mask on the entire page.
+“mask” is used for prevent user action or notify a sudden warning during running the application.</p>
+
+
+        <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/ax5ui/ax5ui-mask/master/dist/ax5mask.css">
+        <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+        <script type="text/javascript" src="https://cdn.rawgit.com/ax5ui/ax5core/master/dist/ax5core.min.js"></script>
+        <script type="text/javascript" src="https://cdn.rawgit.com/ax5ui/ax5ui-mask/master/dist/ax5mask.min.js"></script>
+
+  <script type="text/javascript">
+      $(document.body).ready(function () {
+          var mask = new ax5.ui.mask();
+          $('#mask-open').click(function () {
+              mask.open();
+
+              setTimeout(function () {
+                  mask.close();
+              }, 2000);
+          });
+
+      });
+  </script>
+  <br>
+  <button id="mask-open" type="button">Button</button>
+  <p>
+    <code>Mask effect will disappear after 2seconds.<br>
+  </code></p>
+
+
+        <ul>
+<li>
+<h3>html head : import the AX5UI-mask javascript file.</h3>
+</li>
+</ul>
+<p>insert import ‘ax5ui-mask’ link at html head tag.</p>
+<pre class="prettyprint linenums lang-html"><code>&lt;head&gt;
+&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.rawgit.com/ax5ui/ax5ui-mask/master/dist/ax5mask.css&quot; /&gt;
 &lt;script type=&quot;text/javascript&quot; src=&quot;https://code.jquery.com/jquery-1.12.3.min.js&quot;&gt;&lt;/script&gt;
 &lt;script type=&quot;text/javascript&quot; src=&quot;https://cdn.rawgit.com/ax5ui/ax5core/master/dist/ax5core.min.js&quot;&gt;&lt;/script&gt;
-&lt;script type=&quot;text/javascript&quot; src=&quot;https://cdn.rawgit.com/ax5ui/ax5ui-grid/master/dist/ax5grid.min.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;https://cdn.rawgit.com/ax5ui/ax5ui-mask/master/dist/ax5mask.min.js&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;
+</code></pre>
+<br>
+<ul>
+<li>
+<h3>html body : make button to call the mask function.</h3>
+</li>
+</ul>
+<p>make button to call ‘ax5ui-mask’ method.</p>
+<pre class="prettyprint linenums lang-html"><code>&lt;body&gt;
+&lt;button id=&quot;mask-open&quot; type=&quot;button&quot;&gt;Button&lt;/button&gt;
+&lt;/body&gt;
+</code></pre>
+<br>
+<ul>
+<li>
+<h3>java script : bind the action with button.</h3>
+</li>
+</ul>
+<p>define the   action when method called.</p>
+<pre class="prettyprint linenums lang-js"><code>&lt;script type=&quot;text/javascript&quot;&gt;
+    $(document.body).ready(function () {
+        var mask = new ax5.ui.mask();
+        $('#mask-open').click(function () {
+            mask.open();
+
+            setTimeout(function () {
+                mask.close();
+            }, 2000);
+        });
+
+    });
+&lt;/script&gt;
 </code></pre>
 
 
-        HTML
-        <pre class="prettyprint linenums lang-html">&lt;div data-ax5grid="first-grid" data-ax5grid-config="{&#10;                    showLineNumber: true,&#10;                    showRowSelector: true,&#10;                    multipleSelect: true&#10;                }" style="height: 300px;">&lt;/div></pre><div data-ax5grid="first-grid" data-ax5grid-config="{&#10;                    showLineNumber: true,&#10;                    showRowSelector: true,&#10;                    multipleSelect: true&#10;                }" style="height: 300px;"></div>
-
-        <div class="DH10"></div>
-        JS
-        <pre class="prettyprint linenums lang-js">&lt;script type="text/javascript">
-    var firstGrid = new ax5.ui.grid();
-
-    $(document.body).ready(function () {
-
-        firstGrid.setConfig({
-            target: $('[data-ax5grid="first-grid"]'),
-            columns: [
-                {key: "a", label: "field A"},
-                {key: "b", label: "field B"},
-                {key: "c", label: "&lt;b>numbers C&lt;/b>", formatter: "money"},
-                {key: "d", label: "field D"},
-                {key: "e", label: "field E"},
-                {key: "f", label: "field F"},
-                {key: "g", label: "field G"},
-                {key: "h", label: "field H"}
-            ]
-        });
-
-        var list = [];
-        for (var a = 0, l = 100; a &lt; l; a++) {
-            list.push({a: "A value", b: "B value", c: (a*1000), d: "D value", e: "E value", f: "F value", g: "G value"});
-        }
-        firstGrid.setData(list);
-    });
-&lt;/script></pre><script type="text/javascript">var firstGrid = new ax5.ui.grid();
-
-    $(document.body).ready(function () {
-
-        firstGrid.setConfig({
-            target: $('[data-ax5grid="first-grid"]'),
-            columns: [
-                {key: "a", label: "field A"},
-                {key: "b", label: "field B"},
-                {key: "c", label: "<b>numbers C</b>", formatter: "money"},
-                {key: "d", label: "field D"},
-                {key: "e", label: "field E"},
-                {key: "f", label: "field F"},
-                {key: "g", label: "field G"},
-                {key: "h", label: "field H"}
-            ]
-        });
-
-        var list = [];
-        for (var a = 0, l = 100; a < l; a++) {
-            list.push({a: "A value", b: "B value", c: (a*1000), d: "D value", e: "E value", f: "F value", g: "G value"});
-        }
-        firstGrid.setData(list);
-    });
-</script></script>
-
+    <p>
+      <code>if you want to change the duration, adjust number on setTimeout. 1000 means 1s </code>
+    </p>
     
                     </div>
                 </div>
