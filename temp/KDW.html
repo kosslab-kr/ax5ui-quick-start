@@ -122,7 +122,7 @@
         
         <div class="contents">
             <div class="style-sub-visual">
-                <div class="title">TestPage</div>
+                <div class="title">ax5ui-mask</div>
                 <div class="description">TestPage</div>
             </div>
         </div>
@@ -135,67 +135,79 @@
                     <div class="col-md-3">
                         <div class="docs-menu" id="docs-menu">
                             <div class="docs-menu-scroll">
-                                <ul><li  class='active'><a href="\temp\KDW.html">TestPage</a></li><li ><a href="\temp\Ma.html">TestPageMa</a></li></ul>
+                                <ul><li  class='active'><a href="\temp\KDW.html">ax5ui-mask</a></li><li ><a href="\temp\Ma.html">TestPageMa</a></li></ul>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-9">
                         
 
-        <h1>TestPage/KDW.</h1>
+        <h1>ax5ui-mask</h1>
 
 
-        <h2>What is npm?</h2>
-<p>npm makes it easy for JavaScript developers to share and reuse code, and it makes it easy to update the code that you`re sharing.</p>
-<p>if you need npm click <a href="https://www.npmjs.com/">here</a></p>
-<p>###npm install</p>
-<p>command this instruction</p>
-<pre><code>npm install
-</code></pre>
-<p>After npm installation, type this instruction</p>
-<pre><code>npm install -g gulp
-</code></pre>
-<p>after that, type this instruction</p>
-<pre><code>gulp default
-</code></pre>
-<p>then, you can see this message</p>
-<pre><code>[20:19:34] Using gulpfile c:\path..
-[20:19:34] Starting `default'...
-[20:19:34] Finished 'default' after 66ms
-</code></pre>
-<p>But, if you use windows, it would’t be work properly.
-in this case, type this instruction</p>
-<pre><code>gulp watching
-</code></pre>
-<p><code>if you fail to run gulp, please try again from the npm install</code></p>
+        <h2>Basic Usage</h2>
+<hr/>
+When you click the button below, you can put a semi-transparent mask on the entire page.
+"mask" is used for prevent user action or notify a sudden warning during running the application.
 
 
-<head>
-        <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/ax5ui/ax5ui-calendar/master/dist/ax5calendar.css">
-  <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
-  <script type="text/javascript" src="https://cdn.rawgit.com/ax5ui/ax5core/master/dist/ax5core.min.js"></script>
-  <script type="text/javascript" src="https://cdn.rawgit.com/ax5ui/ax5ui-calendar/master/dist/ax5calendar.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/ax5ui/ax5ui-mask/master/dist/ax5mask.css">
+        <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+        <script type="text/javascript" src="https://cdn.rawgit.com/ax5ui/ax5core/master/dist/ax5core.min.js"></script>
+        <script type="text/javascript" src="https://cdn.rawgit.com/ax5ui/ax5ui-mask/master/dist/ax5mask.min.js"></script>
 
   <script type="text/javascript">
+      $(document.body).ready(function () {
+          var mask = new ax5.ui.mask();
+          $('#mask-open').click(function () {
+              mask.open();
+
+              setTimeout(function () {
+                  mask.close();
+              }, 2000);
+          });
+
+      });
+  </script>
+  <br>
+  <button id="mask-open" type="button">Button</button>
+  <p>
+    <code>Mask effect will disappear after 2seconds.<br>
+  </code></p>
+
+
+        <h5>if you want to practice this. follow this tutorial</h5>
+<hr/>
+<h3>Insert the “ax5dialog” in the HTML HEAD.</h3>
+<p>Location of the folder can be determined freely in your project. But be careful not to accidentally caused exactly the path.</p>
+<pre class="prettyprint linenums lang-html"><code>&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.rawgit.com/ax5ui/ax5ui-dialog/master/dist/ax5dialog.css&quot; /&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;https://code.jquery.com/jquery-1.12.3.min.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;https://cdn.rawgit.com/ax5ui/ax5core/master/dist/ax5core.min.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;https://cdn.rawgit.com/ax5ui/ax5ui-dialog/master/dist/ax5dialog.min.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+<h4>Make Button</h4>
+<pre class="prettyprint linenums lang-js"><code>&lt;button id=&quot;mask-open&quot; type=&quot;button&quot;&gt;Button&lt;/button&gt;
+</code></pre>
+<h3>Script</h3>
+<pre class="prettyprint linenums lang-js"><code>&lt;script type=&quot;text/javascript&quot;&gt;
     $(document.body).ready(function () {
-        var myCalendar = new ax5.ui.calendar({
-            target: document.getElementById("calendar-target"),
-            displayDate: (new Date()),
-            onClick: function () {
-                console.log(this);
-                console.log(myCalendar.getSelection());
-            },
-            onStateChanged: function () {
-                console.log(this);
-            }
+        var mask = new ax5.ui.mask();
+        $('#mask-open').click(function () {
+            mask.open();
+
+            setTimeout(function () {
+                mask.close();
+            }, 2000);
         });
+
     });
-</script>
-</head>
-<body>
-  <div id="calendar-target" style="&#10;                  width:300px;&#10;                  border:1px solid #ccc;&#10;                  border-radius: 5px;&#10;                  padding: 5px;&#10;                  overflow: hidden;"> 
-  </div>
-</body>
+&lt;/script&gt;
+</code></pre>
+
+
+    <p>
+      <code>if you want to change the duration, adjust number on setTimeout. 1000 means 1s </code>
+    </p>
     
                     </div>
                 </div>
