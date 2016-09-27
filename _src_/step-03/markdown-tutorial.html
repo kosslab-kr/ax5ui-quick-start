@@ -1,0 +1,32 @@
+<tmpl-metadata parentId="step-03" parentTitle="Step-03" sort="3" id="markdown_tutorial" title="Markdown-Tutiral" desc="" />
+
+<layout-use template="${data.layoutPath}" parent-id="${data.metadata.parentId}" page-id="${data.metadata.id}" body-style="sub-page" with-menu="true">
+    <layout-put into="visual">
+        <div class="contents">
+            <div class="style-sub-visual">
+                <div class="title">${data.metadata.title}</div>
+                <div class="description">Markdown Tutorial</div>
+            </div>
+        </div>
+    </layout-put>
+    <layout-put into="body">
+
+        <ax5docs-md>
+            # Markdown tutorial
+        </ax5docs-md>
+
+        <ax5docs-md file = "${data.mdpath}/SDU/markdownTutorial.md">
+
+            <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/ax5ui/ax5ui-grid/master/dist/ax5grid.css"/>
+            <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+            <script type="text/javascript" src="https://cdn.rawgit.com/ax5ui/ax5core/master/dist/ax5core.min.js"></script>
+            <script type="text/javascript" src="https://cdn.rawgit.com/ax5ui/ax5ui-grid/master/dist/ax5grid.min.js"></script>
+            ```
+        </ax5docs-md>
+
+
+    </layout-put>
+    <layout-put into="page-js">
+
+    </layout-put>
+</layout-use>
