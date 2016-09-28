@@ -1,0 +1,31 @@
+<tmpl-metadata parentId="step-00" parentTitle="Step.0" sort="1" id="index" title="Index" desc="" />
+
+
+
+<layout-use template="${data.layoutPath}" parent-id="${data.metadata.parentId}" page-id="${data.metadata.id}" body-style="sub-page" with-menu="true">
+    <layout-put into="visual">
+        <div class="contents">
+            <div class="style-sub-visual">
+                <div class="title">${data.metadata.title}</div>
+                <div class="description">step0</div>
+            </div>
+        </div>
+    </layout-put>
+    <layout-put into="body">
+
+        <ax5docs-md>
+            # TestPage/step0
+        </ax5docs-md>
+
+        <ax5docs-md>
+          ```hello world!
+          ```
+
+        </ax5docs-md>
+
+
+    </layout-put>
+    <layout-put into="page-js">
+
+    </layout-put>
+</layout-use>

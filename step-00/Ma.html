@@ -103,7 +103,7 @@
                         <ul class="nav navbar-nav" id="docs-menu-print-target">
                             
                             
-                                <li ><a href="\step-00\index.html">Step.0</a></li><li ><a href="\step-01\index.html">Step.01</a></li><li ><a href="\step-02\index.html">Step.02</a></li><li class='active'><a href="\step-03\ax5ui-mask.html">Step.03</a></li><li ><a href="\temp\ax5ui-mask.html">Temp</a></li>
+                                <li ><a href="\step-01\index.html">Step.01</a></li><li ><a href="\step-02\index.html">Step.02</a></li><li class='active'><a href="\step-03\ax5ui-mask.html">Step.03</a></li><li ><a href="\temp\ax5ui-mask.html">Temp</a></li>
                             
                         </ul>
 
@@ -124,8 +124,8 @@
         
         <div class="contents">
             <div class="style-sub-visual">
-                <div class="title">ax5ui-mask</div>
-                <div class="description">dialog 기능에 대해 알아봅시다.</div>
+                <div class="title">TestPageMa</div>
+                <div class="description">TestPage</div>
             </div>
         </div>
     
@@ -137,96 +137,88 @@
                     <div class="col-md-3">
                         <div class="docs-menu" id="docs-menu">
                             <div class="docs-menu-scroll">
-                                <ul><li  class='active'><a href="\step-03\ax5ui-mask.html">ax5ui-mask</a></li><li ><a href="\step-03\markdown-tutorial.html">Markdown-Tutiral</a></li><li ><a href="\step-03\ax5ui-toast.html">ax5ui-toast</a></li><li ><a href="\step-03\ax5ui-modal.html">ax5ui-modal</a></li><li ><a href="\step-03\ax5ui-calendar.html">ax5ui-calendar</a></li><li ><a href="\step-03\Ma.html">TestPageMa</a></li><li ><a href="\step-03\ax5ui-dialog.html">ax5ui-dialog</a></li></ul>
+                                <ul><li ><a href="\step-03\ax5ui-mask.html">ax5ui-mask</a></li><li ><a href="\step-03\markdown-tutorial.html">Markdown-Tutiral</a></li><li ><a href="\step-03\ax5ui-toast.html">ax5ui-toast</a></li><li ><a href="\step-03\ax5ui-modal.html">ax5ui-modal</a></li><li ><a href="\step-03\ax5ui-calendar.html">ax5ui-calendar</a></li><li  class='active'><a href="\step-03\Ma.html">TestPageMa</a></li><li  class='active'><a href="\step-00\Ma.html">TestPageMa</a></li><li ><a href="\step-03\ax5ui-dialog.html">ax5ui-dialog</a></li></ul>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-9">
                         
 
-        <h1>ax5ui-mask</h1>
+        <h1>TestPage/Ma.</h1>
 
 
-        <h2>Basic Usage</h2>
-<p>When you click the button below, you can put a semi-transparent mask on the entire page.
-&quot;mask&quot; is used for prevent user action or notify a sudden warning while running the application.</p>
-
-
-        <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/ax5ui/ax5ui-mask/master/dist/ax5mask.css">
-        <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
-        <script type="text/javascript" src="https://cdn.rawgit.com/ax5ui/ax5core/master/dist/ax5core.min.js"></script>
-        <script type="text/javascript" src="https://cdn.rawgit.com/ax5ui/ax5ui-mask/master/dist/ax5mask.min.js"></script>
-
-  <script type="text/javascript">
-      $(document.body).ready(function () {
-          var mask = new ax5.ui.mask();
-          $('#mask-open').click(function () {
-              mask.open();
-
-              setTimeout(function () {
-                  mask.close();
-              }, 2000);
-          });
-
-      });
-  </script>
-  <br>
-  <button id="mask-open" type="button">Button</button>
-  <p>
-    <code>Mask effect will disappear after 2seconds.<br>
-  </code></p>
-
-
-        <ul>
-<li>
-<h3>html head : import the AX5UI-mask javascript file.</h3>
-</li>
+        <p><a href="https://github.com/axisj"><img src="https://img.shields.io/badge/AXISJ.com-Contributed-green.svg" alt="axisj-contributed"></a>
+<img src="https://img.shields.io/badge/Seowoo-Mondo&amp;Thomas-red.svg" alt=""></p>
+<h1>ax5ui-dialog</h1>
+<blockquote>
+<p><em>Dependencies</em></p>
+<ul>
+<li><em><a href="http://jquery.com/">jQuery 1.X+</a></em></li>
+<li><em><a href="http://ax5.io/ax5core">ax5core</a></em></li>
+<li><em><a href="http://getbootstrap.com/">bootstrap</a></em></li>
 </ul>
-<p>insert import 'ax5ui-mask' link at html head tag.</p>
-<pre class="prettyprint linenums lang-html"><code>&lt;head&gt;
-&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.rawgit.com/ax5ui/ax5ui-mask/master/dist/ax5mask.css&quot; /&gt;
+</blockquote>
+<h3>Install by bower</h3>
+<pre class="prettyprint linenums lang-sh"><code>bower install ax5ui-dialog
+</code></pre>
+<p><a href="http://bower.io/#install-bower">bower</a> is web front-end package manager.
+using the <code>bower</code>, when you install the plug-in is installed to resolve the plug-in dependencies under the <code>bower_components</code> folder.<br>
+(You can change the folder location. <a href="http://bower.io/docs/config/#bowerrc-specification">.bowerrc</a> )</p>
+<p>It is recommended that you install by using the <code>bower</code>.
+If you've never used a bower is, you will be able to be used for <a href="http://bower.io/#install-bower">http://bower.io/#install-bower</a>.</p>
+<h3>Install by npm</h3>
+<p>If you do not use the bower, it can be downloaded by using the npm as second best.
+In npm, so pile on the package manager for the front end, you need to solve the problem of plug-in dependencies.</p>
+<pre class="prettyprint linenums lang-sh"><code>npm install jquery
+npm install ax5core
+npm install ax5ui-dialog
+</code></pre>
+<p>After you download the file in npm install, you will need to copy to the location where you want to use as a resource for the project.
+If the inconvenience in the process that you want to copy the file and can be easily copied by using a <code>gulp</code> or <code>grunt</code>.</p>
+<h3>Download code</h3>
+<ul>
+<li><a href="https://github.com/ax5ui/ax5core/releases">ax5core Github releases</a></li>
+<li><a href="https://github.com/ax5ui/ax5ui-dialog/releases">ax5ui-dialog Github releases</a></li>
+</ul>
+<h3>Insert the &quot;ax5dialog&quot; in the HTML HEAD.</h3>
+<p>Location of the folder can be determined freely in your project. But be careful not to accidentally caused
+exactly the path.</p>
+<pre class="prettyprint linenums lang-html"><code>&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.rawgit.com/ax5ui/ax5ui-dialog/master/dist/ax5dialog.css&quot; /&gt;
 &lt;script type=&quot;text/javascript&quot; src=&quot;https://code.jquery.com/jquery-1.12.3.min.js&quot;&gt;&lt;/script&gt;
 &lt;script type=&quot;text/javascript&quot; src=&quot;https://cdn.rawgit.com/ax5ui/ax5core/master/dist/ax5core.min.js&quot;&gt;&lt;/script&gt;
-&lt;script type=&quot;text/javascript&quot; src=&quot;https://cdn.rawgit.com/ax5ui/ax5ui-mask/master/dist/ax5mask.min.js&quot;&gt;&lt;/script&gt;
-&lt;/head&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;https://cdn.rawgit.com/ax5ui/ax5ui-dialog/master/dist/ax5dialog.min.js&quot;&gt;&lt;/script&gt;
 </code></pre>
-<br>
-<ul>
-<li>
-<h3>html body : make button to call the mask function.</h3>
-</li>
-</ul>
-<p>make button to call 'ax5ui-mask' method.</p>
-<pre class="prettyprint linenums lang-html"><code>&lt;body&gt;
-&lt;button id=&quot;mask-open&quot; type=&quot;button&quot;&gt;Button&lt;/button&gt;
-&lt;/body&gt;
+<p><strong>CDN urls</strong>
+It is CDN url of ax5ui-select. ax5ui offers the CDN services through the rawgit.</p>
+<pre><code>https://cdn.rawgit.com/ax5ui/ax5ui-dialog/master/dist/ax5dialog.css
+https://cdn.rawgit.com/ax5ui/ax5ui-dialog/master/dist/ax5dialog.js
+https://cdn.rawgit.com/ax5ui/ax5ui-dialog/master/dist/ax5dialog.min.js
 </code></pre>
-<br>
-<ul>
-<li>
-<h3>java script : bind the action with button.</h3>
-</li>
-</ul>
-<p>define the   action when method called.</p>
-<pre class="prettyprint linenums lang-js"><code>&lt;script type=&quot;text/javascript&quot;&gt;
-    $(document.body).ready(function () {
-        var mask = new ax5.ui.mask();
-        $('#mask-open').click(function () {
-            mask.open();
+<h3>Basic Usages</h3>
+<pre class="prettyprint linenums lang-js"><code>var myDialog = new ax5.ui.dialog({
+    title: '&lt;i class=&quot;axi axi-ion-alert&quot;&gt;&lt;/i&gt; Default alert',
+    onStateChanged: function(){
+    
+    }
+});
 
-            setTimeout(function () {
-                mask.close();
-            }, 2000);
-        });
-
+$('#btn').click(function () {
+    myDialog.alert({
+        msg: 'Alert message'
+    }, function () {
+        console.log(this);
     });
-&lt;/script&gt;
+});
 </code></pre>
+<hr>
+<h3>Preview</h3>
+<ul>
+<li><a href="http://ax5.io/ax5ui-dialog/demo/index.html">See Demostration</a></li>
+</ul>
+<p>If you have any questions, please refer to the following <a href="https://github.com/ax5ui/ax5ui-kernel">gitHub</a></p>
 
 
-    <p>
-      <code>if you want to change the duration, adjust number on setTimeout. 1000 means 1s </code>
-    </p>
+
     
                     </div>
                 </div>
