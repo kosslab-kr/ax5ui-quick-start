@@ -1,10 +1,15 @@
 exports.render = function (input, out) {
     var _s = "", s, _out, HTML, CSS, JS;
     var md = require('markdown-it')({
-        html: true,
-        linkify: true,
-        typographer: true
-    });
+              html: true,
+              linkify: true,
+              typography: true
+            }).use(require('markdown-it-video', { // <-- this use(package_name) is required
+              youtube: { width: 500, height: 281 },
+              vimeo: { width: 500, height: 281 },
+              vine: { width: 600, height: 600, embed: 'simple' },
+              prezi: { width: 550, height: 400 }
+            }));
     var strip_indent = require('strip-indent');
     var fs = require('fs'), readFileData;
 

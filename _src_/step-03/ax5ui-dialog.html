@@ -1,0 +1,46 @@
+<tmpl-metadata parentId="step-03" parentTitle="Step.03" sort="307" id="dialog" title="ax5ui-dialog" desc="" />
+
+<layout-use template="${data.layoutPath}" parent-id="${data.metadata.parentId}" page-id="${data.metadata.id}" body-style="sub-page" with-menu="true">
+    <layout-put into="visual">
+        <div class="contents">
+            <div class="style-sub-visual">
+                <div class="title">${data.metadata.title}</div>
+                <div class="description">dialog 기능에 대해 알아봅시다.</div>
+            </div>
+        </div>
+    </layout-put>
+    <layout-put into="body">
+      <ax5docs-md>
+        # 제목
+        어쩌구저쩌구!
+        > 인용문
+        ```js
+        var value = 1;
+        //주석주석
+        ```
+        다음의 코드를 html head에 넣으세요.
+      </ax5docs-md>
+
+      <ax5docs-html>
+        <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/ax5ui/ax5ui-dialog/master/dist/ax5dialog.css" />
+        <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+        <script type="text/javascript" src="https://cdn.rawgit.com/ax5ui/ax5core/master/dist/ax5core.min.js"></script>
+        <script type="text/javascript" src="https://cdn.rawgit.com/ax5ui/ax5ui-dialog/master/dist/ax5dialog.min.js"></script>
+      </ax5docs-html>
+      <ax5docs-html run="true">
+        <button class="btn btn-defalt" data-btn="alert">다이얼로그 열기</button>
+      </ax5docs-html>
+      <h3>SCRIPT</h3>
+      <ax5docs-js run="true">
+        <script>
+        var myDialog = new ax5.ui.dialog();
+          $(document.body).on("click", '[data-btn="alert"]', function() {
+            myDialog.alert("나온다!");
+        });
+        </script>
+      </ax5docs-js>
+    </layout-put>
+    <layout-put into="page-js">
+
+    </layout-put>
+</layout-use>
