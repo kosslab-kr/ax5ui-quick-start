@@ -101,7 +101,7 @@
                         <ul class="nav navbar-nav" id="docs-menu-print-target">
                             
                             
-                                <li ><a href="\step-01\index.html">Step.01</a></li><li ><a href="\step-02\index.html">Step.02</a></li><li class='active'><a href="\step-03\ax5ui-dialog.html">Step.03</a></li><li ><a href="\temp\ax5ui-mask.html">Temp</a></li>
+                                <li class='active'><a href="\step-03\ax5ui-mask.html">Step.03</a></li><li ><a href="\temp\ax5ui-mask.html">Temp</a></li><li ><a href="\step-01\index.html">Step.01</a></li><li ><a href="\step-02\index.html">Step.02</a></li>
                             
                         </ul>
 
@@ -123,7 +123,7 @@
         <div class="contents">
             <div class="style-sub-visual">
                 <div class="title">ax5ui-mask</div>
-                <div class="description">mask 기능에 대해 알아봅시다.</div>
+                <div class="description">dialog 기능에 대해 알아봅시다.</div>
             </div>
         </div>
     
@@ -135,7 +135,7 @@
                     <div class="col-md-3">
                         <div class="docs-menu" id="docs-menu">
                             <div class="docs-menu-scroll">
-                                <ul><li ><a href="\step-03\ax5ui-dialog.html">ax5ui-dialog</a></li><li  class='active'><a href="\step-03\ax5ui-mask.html">ax5ui-mask</a></li><li ><a href="\step-03\Ma.html">TestPageMa</a></li><li ><a href="\step-03\markdown-tutorial.html">Markdown-Tutiral</a></li></ul>
+                                <ul><li  class='active'><a href="\step-03\ax5ui-mask.html">ax5ui-mask</a></li><li ><a href="\step-03\ax5ui-toast.html">ax5ui-toast</a></li><li ><a href="\step-03\Ma.html">TestPageMa</a></li><li ><a href="\step-03\ax5ui-modal.html">ax5ui-modal</a></li><li ><a href="\step-03\markdown-tutorial.html">Markdown-Tutiral</a></li><li ><a href="\step-03\ax5ui-calendar.html">ax5ui-calendar</a></li></ul>
                             </div>
                         </div>
                     </div>
@@ -146,9 +146,8 @@
 
 
         <h2>Basic Usage</h2>
-<hr/>
-When you click the button below, you can put a semi-transparent mask on the entire page.
-"mask" is used for prevent user action or notify a sudden warning during running the application.
+<p>When you click the button below, you can put a semi-transparent mask on the entire page.
+“mask” is used for prevent user action or notify a sudden warning while running the application.</p>
 
 
         <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/ax5ui/ax5ui-mask/master/dist/ax5mask.css">
@@ -176,19 +175,37 @@ When you click the button below, you can put a semi-transparent mask on the enti
   </code></p>
 
 
-        <h5>if you want to practice this. follow this tutorial</h5>
-<hr/>
-<h3>Insert the “ax5dialog” in the HTML HEAD.</h3>
-<p>Location of the folder can be determined freely in your project. But be careful not to accidentally caused exactly the path.</p>
-<pre class="prettyprint linenums lang-html"><code>&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.rawgit.com/ax5ui/ax5ui-dialog/master/dist/ax5dialog.css&quot; /&gt;
+        <ul>
+<li>
+<h3>html head : import the AX5UI-mask javascript file.</h3>
+</li>
+</ul>
+<p>insert import ‘ax5ui-mask’ link at html head tag.</p>
+<pre class="prettyprint linenums lang-html"><code>&lt;head&gt;
+&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.rawgit.com/ax5ui/ax5ui-mask/master/dist/ax5mask.css&quot; /&gt;
 &lt;script type=&quot;text/javascript&quot; src=&quot;https://code.jquery.com/jquery-1.12.3.min.js&quot;&gt;&lt;/script&gt;
 &lt;script type=&quot;text/javascript&quot; src=&quot;https://cdn.rawgit.com/ax5ui/ax5core/master/dist/ax5core.min.js&quot;&gt;&lt;/script&gt;
-&lt;script type=&quot;text/javascript&quot; src=&quot;https://cdn.rawgit.com/ax5ui/ax5ui-dialog/master/dist/ax5dialog.min.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;https://cdn.rawgit.com/ax5ui/ax5ui-mask/master/dist/ax5mask.min.js&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;
 </code></pre>
-<h4>Make Button</h4>
-<pre class="prettyprint linenums lang-js"><code>&lt;button id=&quot;mask-open&quot; type=&quot;button&quot;&gt;Button&lt;/button&gt;
+<br>
+<ul>
+<li>
+<h3>html body : make button to call the mask function.</h3>
+</li>
+</ul>
+<p>make button to call ‘ax5ui-mask’ method.</p>
+<pre class="prettyprint linenums lang-html"><code>&lt;body&gt;
+&lt;button id=&quot;mask-open&quot; type=&quot;button&quot;&gt;Button&lt;/button&gt;
+&lt;/body&gt;
 </code></pre>
-<h3>Script</h3>
+<br>
+<ul>
+<li>
+<h3>java script : bind the action with button.</h3>
+</li>
+</ul>
+<p>define the   action when method called.</p>
 <pre class="prettyprint linenums lang-js"><code>&lt;script type=&quot;text/javascript&quot;&gt;
     $(document.body).ready(function () {
         var mask = new ax5.ui.mask();

@@ -11,6 +11,7 @@ insert import 'ax5ui-toast' link at html head tag.
 </head>
 ```
 <br/>
+
 ## html body : make button to call the toast function.
 
 make button to call 'ax5ui-toast' method.
@@ -21,6 +22,7 @@ make button to call 'ax5ui-toast' method.
 </body>
 ```
 <br/>
+
 ## java script : bind the action with button.
 define the action when method called.
 
@@ -33,7 +35,7 @@ define the action when method called.
                 console.log(this);
             }
         });
- 
+
         $('#toast-push').click(function () {
             toast.push('Toast message', function () {
                 // close toast

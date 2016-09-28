@@ -1,0 +1,72 @@
+<tmpl-metadata parentId="step-03" parentTitle="Step.03" sort="4" id="toast" title="ax5ui-modal" desc="" />
+
+<layout-use template="${data.layoutPath}" parent-id="${data.metadata.parentId}" page-id="${data.metadata.id}" body-style="sub-page" with-menu="true">
+    <layout-put into="visual">
+        <div class="contents">
+            <div class="style-sub-visual">
+                <div class="title">${data.metadata.title}</div>
+                <div class="description">modal 기능에 대해 알아봅시다.</div>
+            </div>
+        </div>
+    </layout-put>
+    <layout-put into="body">
+
+        <ax5docs-md>
+            # ax5ui-modal
+        </ax5docs-md>
+
+        <h2>Basic Modal</h2>
+        <br/>
+        it would be used for ads on internet. it also known as pop-up.
+        <br/>
+        click the button.
+        <br/>
+        <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+        <script type="text/javascript" src="bower_components/ax5core/dist/ax5core.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="bower_components/ax5ui-modal/dist/ax5modal.css">
+        <script type="text/javascript" src="bower_components/ax5ui-modal/dist/ax5modal.min.js"></script>
+
+        <script type="text/javascript">
+      $(document.body).ready(function () {
+          var modal = new ax5.ui.modal();
+          modal.setConfig({
+              onStateChanged: function () {
+                  // console.log(this);
+              }
+          });
+
+          $('#modal-open').click(function () {
+              modal.open({}, function () {
+                  // check your browser console
+                  console.log(this);
+
+                  var btn = jQuery(
+                      '<button class="btn btn-default" type="button" style="margin-top: 100px;">' +
+                      'Modal Close</button>');
+                  btn.click(function () {
+                      modal.close();
+                  });
+                  this.$.body.append(btn);
+              });
+          });
+
+      });
+  </script>
+  <br/>
+  <button class="btn btn-default" type="button" id="modal-open">Modal Open</button>
+
+
+        <ax5docs-md file = "${data.mdpath}/KDW/ax5ui-modal.md">
+
+            <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/ax5ui/ax5ui-grid/master/dist/ax5grid.css"/>
+            <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+            <script type="text/javascript" src="https://cdn.rawgit.com/ax5ui/ax5core/master/dist/ax5core.min.js"></script>
+            <script type="text/javascript" src="https://cdn.rawgit.com/ax5ui/ax5ui-grid/master/dist/ax5grid.min.js"></script>
+            ```
+        </ax5docs-md>
+
+    </layout-put>
+    <layout-put into="page-js">
+
+    </layout-put>
+</layout-use>
