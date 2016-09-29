@@ -1,0 +1,119 @@
+<tmpl-metadata parentId="step-03" parentTitle="Step.03" sort="310" id="media-autocomplete" title="ax5ui-autocomplete" desc="" />
+
+
+ 
+<layout-use template="${data.layoutPath}" parent-id="${data.metadata.parentId}" page-id="${data.metadata.id}" body-style="sub-page" with-menu="true">
+    <layout-put into="visual">
+        <div class="contents">
+            <div class="style-sub-visual">
+                <div class="title">${data.metadata.title}</div>
+                <div class="description">media-autocomplete 기능에 대해 알아봅시다.</div>
+            </div>
+        </div>
+    </layout-put>
+    <layout-put into="body">
+
+        <ax5docs-md>
+            # ax5ui-autocomplete
+        </ax5docs-md>
+
+        <h2>Basic Autocomplete</h2>
+        <br/>
+        When searching portal site, We can often see this function. although i type some word, this function will forecast possible words.
+        <br/>
+        Test this by typing alphabet 'a' or 's' otherwise check pre-set values below.
+        <br/>
+
+        <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/ax5ui/ax5ui-autocomplete/master/dist/ax5autocomplete.css" />
+        <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+        <script type="text/javascript" src="https://cdn.rawgit.com/ax5ui/ax5core/master/dist/ax5core.min.js"></script>
+        <script type="text/javascript" src="https://cdn.rawgit.com/ax5ui/ax5ui-autocomplete/master/dist/ax5autocomplete.min.js"></script>
+  <br/>
+
+  <div class="row">
+    <div class="col-md-6">
+        Default
+        <div class="form-group">
+            <div data-ax5autocomplete="autocomplete1" data-ax5autocomplete-config="{}"></div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6">
+        Multiple
+        <div class="form-group">
+            <div data-ax5autocomplete="autocomplete2" data-ax5autocomplete-config="{multiple: true}"></div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    var options = [];
+    options.push({value: "1", text: "string"});
+    options.push({value: "2", text: "number"});
+    options.push({value: "3", text: "substr"});
+    options.push({value: "4", text: "substring"});
+    options.push({value: "5", text: "search"});
+    options.push({value: "6", text: "parseInt"});
+    options.push({value: "7", text: "toFixed"});
+    options.push({value: "8", text: "min"});
+    options.push({value: "9", text: "max"});
+    options.push({value: "10", text: "장기영"});
+    options.push({value: "11", text: "장서우"});
+    options.push({value: "12", text: "이영희"});
+    options.push({value: "13", text: "황인서"});
+    options.push({value: "14", text: "황세진"});
+    options.push({value: "15", text: "이서연"});
+    options.push({value: "16", text: "액시스제이"});
+    options.push({value: "17", text: "ax5"});
+    options.push({value: "18", text: "ax5grid"});
+    options.push({value: "19", text: "ax5combobox"});
+    options.push({value: "20", text: "ax5autocomplete"});
+    options.push({value: "21", text: "ax5binder"});
+    options.push({value: "22", text: "ax5select"});
+    options.push({value: "23", text: "ax5mask"});
+    options.push({value: "24", text: "ax5toast"});
+    options.push({value: "25", text: "ax5dialog"});
+    options.push({value: "26", text: "ax5modal"});
+
+
+    $(document.body).ready(function () {
+        $('[data-ax5autocomplete]').ax5autocomplete({
+            removeIcon: '<i class="fa fa-times" aria-hidden="true"></i>',
+            onSearch: function (callBack) {
+                var searchWord = this.searchWord;
+                setTimeout(function () {
+                    var regExp = new RegExp(searchWord);
+                    var myOptions = [];
+                    options.forEach(function (n) {
+                        if (n.text.match(regExp)) {
+                            myOptions.push({
+                                value: n.value,
+                                text: n.text
+                            })
+                        }
+                    });
+                    callBack({
+                        options: myOptions
+                    });
+                }, 150);
+
+            }
+        });
+    });
+</script>
+  <br/>
+
+        <ax5docs-md file = "${data.mdpath}/KDW/ax5ui-autocomplete.md">
+
+            <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/ax5ui/ax5ui-grid/master/dist/ax5grid.css"/>
+            <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+            <script type="text/javascript" src="https://cdn.rawgit.com/ax5ui/ax5core/master/dist/ax5core.min.js"></script>
+            <script type="text/javascript" src="https://cdn.rawgit.com/ax5ui/ax5ui-grid/master/dist/ax5grid.min.js"></script>
+            ```
+        </ax5docs-md>
+
+    </layout-put>
+    <layout-put into="page-js">
+
+    </layout-put>
+</layout-use>

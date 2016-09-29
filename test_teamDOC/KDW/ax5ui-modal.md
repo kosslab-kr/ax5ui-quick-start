@@ -54,7 +54,7 @@ $(document.body).ready(function () {
 });
 </script>
 ```
-<br/><br/>
+<br/>
 you can set default configuration with setConfig method on ModalInstance. you can pass additional configuration, when opening the modal.
 
 The first argument of modal.open in the example, the set value (object), the second argument, using the callBack function.
