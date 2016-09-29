@@ -1,0 +1,68 @@
+diff a/_src_/step-03/ax5ui-calendar.html b/_src_/step-03/ax5ui-calendar.html	(rejected hunks)
+@@ -0,0 +1,66 @@
++<tmpl-metadata parentId="step-03" parentTitle="Step.03" sort="5" id="calendar" title="ax5ui-calendar" desc="" />
++
++<layout-use template="${data.layoutPath}" parent-id="${data.metadata.parentId}" page-id="${data.metadata.id}" body-style="sub-page" with-menu="true">
++    <layout-put into="visual">
++        <div class="contents">
++            <div class="style-sub-visual">
++                <div class="title">${data.metadata.title}</div>
++                <div class="description">calendar 기능에 대해 알아봅시다.</div>
++            </div>
++        </div>
++    </layout-put>
++    <layout-put into="body">
++
++        <ax5docs-md>
++            # ax5ui-calendar
++        </ax5docs-md>
++
++        <h2>Basic calendar</h2>
++        <br/>
++        you can use the calendar so easily with ax5ui-calendar.
++
++        <br/>
++        <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
++        <script type="text/javascript" src="bower_components/ax5core/dist/ax5core.min.js"></script>
++        <link rel="stylesheet" type="text/css" href="bower_components/ax5ui-calendar/dist/ax5calendar.css">
++        <script type="text/javascript" src="bower_components/ax5ui-calendar/dist/ax5calendar.min.js"></script>
++
++        <script type="text/javascript">
++        $(document.body).ready(function () {
++            var myCalendar = new ax5.ui.calendar({
++                target: document.getElementById("calendar-target"),
++                displayDate: (new Date()),
++                onClick: function () {
++                    console.log(this);
++                    console.log(myCalendar.getSelection());
++                },
++                onStateChanged: function () {
++                    console.log(this);
++                }
++            });
++        });
++    </script>
++  <br/>
++  <div id="calendar-target" style="
++                width:300px;
++                border:1px solid #ccc;
++                border-radius: 5px;
++                padding: 5px;
++                overflow: hidden;">
++
++</div>
++  
++        <ax5docs-md file = "${data.mdpath}/KDW/ax5ui-calendar.md">
++
++            <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/ax5ui/ax5ui-grid/master/dist/ax5grid.css"/>
++            <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
++            <script type="text/javascript" src="https://cdn.rawgit.com/ax5ui/ax5core/master/dist/ax5core.min.js"></script>
++            <script type="text/javascript" src="https://cdn.rawgit.com/ax5ui/ax5ui-grid/master/dist/ax5grid.min.js"></script>
++            ```
++        </ax5docs-md>
++
++    </layout-put>
++    <layout-put into="page-js">
++
++    </layout-put>
++</layout-use>

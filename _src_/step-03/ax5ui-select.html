@@ -1,0 +1,75 @@
+<tmpl-metadata parentId="step-03" parentTitle="Step.03" sort="308" id="select" title="ax5ui-select" desc="" />
+
+
+
+<layout-use template="${data.layoutPath}" parent-id="${data.metadata.parentId}" page-id="${data.metadata.id}" body-style="sub-page" with-menu="true">
+    <layout-put into="visual">
+        <div class="contents">
+            <div class="style-sub-visual">
+                <div class="title">${data.metadata.title}</div>
+                <div class="description">select 기능에 대해 알아봅시다.</div>
+            </div>
+        </div>
+    </layout-put>
+    <layout-put into="body">
+
+        <ax5docs-md>
+            # ax5ui-select
+        </ax5docs-md>
+
+        <h2>Basic Select</h2>
+        <br/>
+        You can make drop-down menu with ax5ui-select.
+        <br/>
+        click the drop-down menu.
+        <br/>
+        <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/ax5ui/ax5ui-select/master/dist/ax5select.css" />
+        <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+        <script type="text/javascript" src="https://cdn.rawgit.com/ax5ui/ax5core/master/dist/ax5core.min.js"></script>
+        <script type="text/javascript" src="https://cdn.rawgit.com/ax5ui/ax5ui-select/master/dist/ax5select.min.js"></script>
+
+        <script type="text/javascript">
+        var options = [];
+        for (var i = 0; i < 100; i++) {
+            options.push({value: "optionValue" + i, text: "optionText" + i});
+        }
+        $(document.body).ready(function(){
+            $('[data-ax5select]').ax5select({
+                options: options
+            });
+        });
+        </script>
+  <br/>
+
+  <div class="row">
+    <div class="col-md-6">
+        <div class="form-group">
+            <div data-ax5select="select1" data-ax5select-config="{}"></div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="form-group">
+            <div data-ax5select="select2" data-ax5select-config="{
+                                multiple: true,
+                                reset:'<i class=\'fa fa-trash\'></i>'
+                             }">
+            </div>
+        </div>
+    </div>
+</div>  
+
+
+        <ax5docs-md file = "${data.mdpath}/KDW/ax5ui-select.md">
+
+            <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/ax5ui/ax5ui-grid/master/dist/ax5grid.css"/>
+            <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+            <script type="text/javascript" src="https://cdn.rawgit.com/ax5ui/ax5core/master/dist/ax5core.min.js"></script>
+            <script type="text/javascript" src="https://cdn.rawgit.com/ax5ui/ax5ui-grid/master/dist/ax5grid.min.js"></script>
+            ```
+        </ax5docs-md>
+
+    </layout-put>
+    <layout-put into="page-js">
+
+    </layout-put>
+</layout-use>
