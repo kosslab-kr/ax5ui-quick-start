@@ -10,28 +10,20 @@
         </div>
     </layout-put>
     <layout-put into="body">
-              <h1>Dialog를 사용하고 싶다면 이 튜토리얼을 차근차근 따라해보세요.</h1>
 
-              <script type="text/javascript">
-              var myDialog = new ax5.ui.dialog();
-                $(document.body).on("click", '[data-btn="alert"]', function() {
-                  myDialog.alert("Alert message!");
-              });
-              </script>
-              <br/>
-              <button id="myDialog" type="button">Alert</button>
+      <h1>Dialog를 사용하고 싶다면 이 튜토리얼을 차근차근 따라해보세요.</h1>
+      <button class="btn btn-defalt" data-btn="alert">Alert</button>
 
+      <script type="text/javascript">
+        var myDialog = new ax5.ui.dialog();
+        $(document.body).on("click", '[data-btn="alert"]', function() {
+        myDialog.alert("Alert message!");
+        });
+      </script>
 
       <ax5docs-md = file = "${data.mdpath}/SDU/ax5ui-dialog.md">
 
       </ax5docs-md>
-
-      <ax5docs-html>
-        <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/ax5ui/ax5ui-dialog/master/dist/ax5dialog.css" />
-        <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
-        <script type="text/javascript" src="https://cdn.rawgit.com/ax5ui/ax5core/master/dist/ax5core.min.js"></script>
-        <script type="text/javascript" src="https://cdn.rawgit.com/ax5ui/ax5ui-dialog/master/dist/ax5dialog.min.js"></script>
-      </ax5docs-html>
 
 
     </layout-put>
