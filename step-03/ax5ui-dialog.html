@@ -141,33 +141,53 @@
                     </div>
                     <div class="col-md-9">
                         
-      <h1>제목</h1>
-<p>어쩌구저쩌구!</p>
-<blockquote>
-<p>인용문</p>
-</blockquote>
-<pre class="prettyprint linenums lang-js"><code>var value = 1;
-//주석주석
+              <h1>Dialog를 사용하고 싶다면 이 튜토리얼을 차근차근 따라해보세요.</h1>
+
+              <script type="text/javascript">
+              var myDialog = new ax5.ui.dialog();
+                $(document.body).on("click", '[data-btn="alert"]', function() {
+                  myDialog.alert("Alert message!");
+              });
+              </script>
+              <br>
+              <button id="myDialog" type="button">Alert</button>
+
+
+      <hr/>
+<h3>가장 먼저 &quot;ax5dialog&quot;를 HTML HEAD부분에 추가해주세요.</h3>
+<p>폴더의 위치는 여러분의 프로젝트에 맞게 자유롭게 정할 수 있습니다. 따라서, 잘못된 경로를 입력하지 않도록 주의하세요.</p>
+<pre class="prettyprint linenums lang-html"><code>&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.rawgit.com/ax5ui/ax5ui-dialog/master/dist/ax5dialog.css&quot; /&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;https://code.jquery.com/jquery-1.12.3.min.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;https://cdn.rawgit.com/ax5ui/ax5core/master/dist/ax5core.min.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;https://cdn.rawgit.com/ax5ui/ax5ui-dialog/master/dist/ax5dialog.min.js&quot;&gt;&lt;/script&gt;
 </code></pre>
-<p>다음의 코드를 html head에 넣으세요.</p>
+<h4>Make Button</h4>
+<pre class="prettyprint linenums lang-html"><code>&lt;button id=&quot;mask-open&quot; type=&quot;button&quot;&gt;Alert&lt;/button&gt;
+</code></pre>
+<h3>Basic Alert Script</h3>
+<pre class="prettyprint linenums lang-js"><code>&lt;script&gt;
+    $(document.body).ready(function () {
+        var dialog = new ax5.ui.dialog({
+            title: &quot;AX5 Dialog&quot;
+        });
+
+        $('#alert-open').click(function () {
+            dialog.alert('Alert message');
+        });
+        $('#alert-close').click(function () {
+            dialog.close();
+        });
+    });
+&lt;/script&gt;
+</code></pre>
 
 
       <pre class="prettyprint linenums lang-html">&lt;link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/ax5ui/ax5ui-dialog/master/dist/ax5dialog.css">
 &lt;script type="text/javascript" src="https://code.jquery.com/jquery-1.12.3.min.js">&lt;/script>
 &lt;script type="text/javascript" src="https://cdn.rawgit.com/ax5ui/ax5core/master/dist/ax5core.min.js">&lt;/script>
 &lt;script type="text/javascript" src="https://cdn.rawgit.com/ax5ui/ax5ui-dialog/master/dist/ax5dialog.min.js">&lt;/script></pre>
-      <pre class="prettyprint linenums lang-html">&lt;button class="btn btn-defalt" data-btn="alert">다이얼로그 열기&lt;/button></pre><button class="btn btn-defalt" data-btn="alert">다이얼로그 열기</button>
-      <h3>SCRIPT</h3>
-      <pre class="prettyprint linenums lang-js">&lt;script>
-var myDialog = new ax5.ui.dialog();
-  $(document.body).on("click", '[data-btn="alert"]', function() {
-    myDialog.alert("나온다!");
-});
-&lt;/script></pre><script type="text/javascript">var myDialog = new ax5.ui.dialog();
-  $(document.body).on("click", '[data-btn="alert"]', function() {
-    myDialog.alert("나온다!");
-});
-</script></script>
+
+
     
                     </div>
                 </div>

@@ -10,15 +10,20 @@
         </div>
     </layout-put>
     <layout-put into="body">
-      <ax5docs-md>
-        # 제목
-        어쩌구저쩌구!
-        > 인용문
-        ```js
-        var value = 1;
-        //주석주석
-        ```
-        다음의 코드를 html head에 넣으세요.
+              <h1>Dialog를 사용하고 싶다면 이 튜토리얼을 차근차근 따라해보세요.</h1>
+
+              <script type="text/javascript">
+              var myDialog = new ax5.ui.dialog();
+                $(document.body).on("click", '[data-btn="alert"]', function() {
+                  myDialog.alert("Alert message!");
+              });
+              </script>
+              <br/>
+              <button id="myDialog" type="button">Alert</button>
+
+
+      <ax5docs-md = file = "${data.mdpath}/SDU/ax5ui-dialog.md">
+
       </ax5docs-md>
 
       <ax5docs-html>
@@ -27,18 +32,8 @@
         <script type="text/javascript" src="https://cdn.rawgit.com/ax5ui/ax5core/master/dist/ax5core.min.js"></script>
         <script type="text/javascript" src="https://cdn.rawgit.com/ax5ui/ax5ui-dialog/master/dist/ax5dialog.min.js"></script>
       </ax5docs-html>
-      <ax5docs-html run="true">
-        <button class="btn btn-defalt" data-btn="alert">다이얼로그 열기</button>
-      </ax5docs-html>
-      <h3>SCRIPT</h3>
-      <ax5docs-js run="true">
-        <script>
-        var myDialog = new ax5.ui.dialog();
-          $(document.body).on("click", '[data-btn="alert"]', function() {
-            myDialog.alert("나온다!");
-        });
-        </script>
-      </ax5docs-js>
+
+
     </layout-put>
     <layout-put into="page-js">
 
