@@ -1,0 +1,74 @@
+<tmpl-metadata parentId="step-03" parentTitle="Step.03" sort="313" id="media-grid" title="ax5ui-grid" desc="" />
+
+
+
+<layout-use template="${data.layoutPath}" parent-id="${data.metadata.parentId}" page-id="${data.metadata.id}" body-style="sub-page" with-menu="true">
+    <layout-put into="visual">
+        <div class="contents">
+            <div class="style-sub-visual">
+                <div class="title">${data.metadata.title}</div>
+                <div class="description">media-grid 기능에 대해 알아봅시다.</div>
+            </div>
+        </div>
+    </layout-put>
+    <layout-put into="body">
+
+        <ax5docs-md>
+            # ax5ui-grid
+        </ax5docs-md>
+
+        <h2>Basic Grid</h2>
+        <br/>
+        It's to easy to make table if you use ax5ui-grid!
+        <br/>
+
+        <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/ax5ui/ax5ui-grid/master/dist/ax5grid.css">
+        <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+        <script type="text/javascript" src="https://cdn.rawgit.com/ax5ui/ax5core/master/dist/ax5core.min.js"></script>
+        <script type="text/javascript" src="https://cdn.rawgit.com/ax5ui/ax5ui-grid/master/dist/ax5grid.min.js"></script>
+    <br/>
+
+    <div data-ax5grid="first-grid" data-ax5grid-config="{}" style="height: 300px;"></div>
+
+  <script type="text/javascript">
+    var firstGrid = new ax5.ui.grid();
+
+    $(document.body).ready(function () {
+
+        firstGrid.setConfig({
+            target: $('[data-ax5grid="first-grid"]'),
+            columns: [
+                {key: "a", label: "field A"},
+                {key: "b", label: "field B"},
+                {key: "c", label: "numbers C"},
+                {key: "d", label: "field D"},
+                {key: "e", label: "field E"},
+                {key: "f", label: "field F"},
+                {key: "g", label: "field G"},
+                {key: "h", label: "field H"}
+            ]
+        });
+
+        var list = [];
+        for (var a = 0, l = 100; a < l; a++) {
+            list.push({a: "A value", b: "B value", c: a % 10, d: "D value", e: "E value", f: "F value", g: "G value"});
+        }
+        firstGrid.setData(list);
+    });
+</script>
+  <br/>
+
+        <ax5docs-md file = "${data.mdpath}/KDW/ax5ui-grid.md">
+
+            <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/ax5ui/ax5ui-grid/master/dist/ax5grid.css"/>
+            <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+            <script type="text/javascript" src="https://cdn.rawgit.com/ax5ui/ax5core/master/dist/ax5core.min.js"></script>
+            <script type="text/javascript" src="https://cdn.rawgit.com/ax5ui/ax5ui-grid/master/dist/ax5grid.min.js"></script>
+            ```
+        </ax5docs-md>
+
+    </layout-put>
+    <layout-put into="page-js">
+
+    </layout-put>
+</layout-use>
