@@ -3,7 +3,7 @@
 
 
 
-    
+     
     
     
 <!DOCTYPE html>
@@ -124,8 +124,8 @@
         
         <div class="contents">
             <div class="style-sub-visual">
-                <div class="title">TestPageMa</div>
-                <div class="description">TestPage</div>
+                <div class="title">ax5ui-combobox</div>
+                <div class="description">media-combobox 기능에 대해 알아봅시다.</div>
             </div>
         </div>
     
@@ -137,86 +137,112 @@
                     <div class="col-md-3">
                         <div class="docs-menu" id="docs-menu">
                             <div class="docs-menu-scroll">
-                                <ul><li ><a href="\step-03\ax5ui-mask.html">ax5ui-mask</a></li><li ><a href="\step-03\markdown-tutorial.html">Markdown-Tutiral</a></li><li ><a href="\step-03\ax5ui-toast.html">ax5ui-toast</a></li><li ><a href="\step-03\ax5ui-modal.html">ax5ui-modal</a></li><li ><a href="\step-03\ax5ui-calendar.html">ax5ui-calendar</a></li><li  class='active'><a href="\step-03\Ma.html">TestPageMa</a></li><li ><a href="\step-03\ax5ui-dialog.html">ax5ui-dialog</a></li><li ><a href="\step-03\ax5ui-select.html">ax5ui-select</a></li><li ><a href="\step-03\ax5ui-media-viewer.html">ax5ui-media-viewer</a></li><li ><a href="\step-03\ax5ui-autocomplete.html">ax5ui-autocomplete</a></li><li ><a href="\step-03\ax5ui-combobox.html">ax5ui-combobox</a></li><li ><a href="\step-03\ax5ui-formatter.html">ax5ui-formatter</a></li><li ><a href="\step-03\ax5ui-grid.html">ax5ui-grid</a></li></ul>
+                                <ul><li ><a href="\step-03\ax5ui-mask.html">ax5ui-mask</a></li><li ><a href="\step-03\markdown-tutorial.html">Markdown-Tutiral</a></li><li ><a href="\step-03\ax5ui-toast.html">ax5ui-toast</a></li><li ><a href="\step-03\ax5ui-modal.html">ax5ui-modal</a></li><li ><a href="\step-03\ax5ui-calendar.html">ax5ui-calendar</a></li><li ><a href="\step-03\Ma.html">TestPageMa</a></li><li ><a href="\step-03\ax5ui-dialog.html">ax5ui-dialog</a></li><li ><a href="\step-03\ax5ui-select.html">ax5ui-select</a></li><li ><a href="\step-03\ax5ui-media-viewer.html">ax5ui-media-viewer</a></li><li ><a href="\step-03\ax5ui-autocomplete.html">ax5ui-autocomplete</a></li><li  class='active'><a href="\step-03\ax5ui-combobox.html">ax5ui-combobox</a></li><li ><a href="\step-03\ax5ui-formatter.html">ax5ui-formatter</a></li><li ><a href="\step-03\ax5ui-grid.html">ax5ui-grid</a></li></ul>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-9">
                         
 
-        <h1>TestPage/Ma.</h1>
+        <h1>ax5ui-combobox</h1>
 
 
-        <p><a href="https://github.com/axisj"><img src="https://img.shields.io/badge/AXISJ.com-Contributed-green.svg" alt="axisj-contributed"></a>
-<img src="https://img.shields.io/badge/Seowoo-Mondo&amp;Thomas-red.svg" alt=""></p>
-<h1>ax5ui-dialog</h1>
-<blockquote>
-<p><em>Dependencies</em></p>
-<ul>
-<li><em><a href="http://jquery.com/">jQuery 1.X+</a></em></li>
-<li><em><a href="http://ax5.io/ax5core">ax5core</a></em></li>
-<li><em><a href="http://getbootstrap.com/">bootstrap</a></em></li>
-</ul>
-</blockquote>
-<h3>Install by bower</h3>
-<pre class="prettyprint linenums lang-sh"><code>bower install ax5ui-dialog
-</code></pre>
-<p><a href="http://bower.io/#install-bower">bower</a> is web front-end package manager.
-using the <code>bower</code>, when you install the plug-in is installed to resolve the plug-in dependencies under the <code>bower_components</code> folder.<br>
-(You can change the folder location. <a href="http://bower.io/docs/config/#bowerrc-specification">.bowerrc</a> )</p>
-<p>It is recommended that you install by using the <code>bower</code>.
-If you've never used a bower is, you will be able to be used for <a href="http://bower.io/#install-bower">http://bower.io/#install-bower</a>.</p>
-<h3>Install by npm</h3>
-<p>If you do not use the bower, it can be downloaded by using the npm as second best.
-In npm, so pile on the package manager for the front end, you need to solve the problem of plug-in dependencies.</p>
-<pre class="prettyprint linenums lang-sh"><code>npm install jquery
-npm install ax5core
-npm install ax5ui-dialog
-</code></pre>
-<p>After you download the file in npm install, you will need to copy to the location where you want to use as a resource for the project.
-If the inconvenience in the process that you want to copy the file and can be easily copied by using a <code>gulp</code> or <code>grunt</code>.</p>
-<h3>Download code</h3>
-<ul>
-<li><a href="https://github.com/ax5ui/ax5core/releases">ax5core Github releases</a></li>
-<li><a href="https://github.com/ax5ui/ax5ui-dialog/releases">ax5ui-dialog Github releases</a></li>
-</ul>
-<h3>Insert the &quot;ax5dialog&quot; in the HTML HEAD.</h3>
-<p>Location of the folder can be determined freely in your project. But be careful not to accidentally caused
-exactly the path.</p>
-<pre class="prettyprint linenums lang-html"><code>&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.rawgit.com/ax5ui/ax5ui-dialog/master/dist/ax5dialog.css&quot; /&gt;
-&lt;script type=&quot;text/javascript&quot; src=&quot;https://code.jquery.com/jquery-1.12.3.min.js&quot;&gt;&lt;/script&gt;
-&lt;script type=&quot;text/javascript&quot; src=&quot;https://cdn.rawgit.com/ax5ui/ax5core/master/dist/ax5core.min.js&quot;&gt;&lt;/script&gt;
-&lt;script type=&quot;text/javascript&quot; src=&quot;https://cdn.rawgit.com/ax5ui/ax5ui-dialog/master/dist/ax5dialog.min.js&quot;&gt;&lt;/script&gt;
-</code></pre>
-<p><strong>CDN urls</strong>
-It is CDN url of ax5ui-select. ax5ui offers the CDN services through the rawgit.</p>
-<pre><code>https://cdn.rawgit.com/ax5ui/ax5ui-dialog/master/dist/ax5dialog.css
-https://cdn.rawgit.com/ax5ui/ax5ui-dialog/master/dist/ax5dialog.js
-https://cdn.rawgit.com/ax5ui/ax5ui-dialog/master/dist/ax5dialog.min.js
-</code></pre>
-<h3>Basic Usages</h3>
-<pre class="prettyprint linenums lang-js"><code>var myDialog = new ax5.ui.dialog({
-    title: '&lt;i class=&quot;axi axi-ion-alert&quot;&gt;&lt;/i&gt; Default alert',
-    onStateChanged: function(){
-    
-    }
-});
+        <h2>Basic Combobox</h2>
+        <br>
+        Combobox would be used for selecting more options. then, the result about searching will contains this options.
+        <br>
+        Just click box, you can select more than one on right box.
+        <br>
 
-$('#btn').click(function () {
-    myDialog.alert({
-        msg: 'Alert message'
-    }, function () {
-        console.log(this);
+        <link rel="stylesheet" type="text/css" href="src/ax5ui-combobox/dist/ax5combobox.css">
+  <script type="text/javascript" src="src/ax5ui-combobox/dist/ax5combobox.min.js"></script>
+    <br>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <div data-ax5combobox="combobox1" data-ax5combobox-config="{size:&#39;sm&#39;}"></div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <div data-ax5combobox="combobox2" data-ax5combobox-config="{&#10;                                 size:&#39;lg&#39;,&#10;                                 multiple: true&#10;                                 }"></div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        var options = [];
+        options.push({value: "string", text: "string"});
+        options.push({value: "number", text: "number"});
+        options.push({value: "substr", text: "substr"});
+        options.push({value: "substring", text: "substring"});
+        options.push({value: "search", text: "search"});
+        options.push({value: "parseInt", text: "parseInt"});
+        options.push({value: "toFixed", text: "toFixed"});
+        options.push({value: "min", text: "min"});
+        options.push({value: "max", text: "max"});
+
+        $(document.body).ready(function () {
+            $('[data-ax5combobox]').ax5combobox({
+                options: options
+            });
+        });
+    </script>
+  <br>
+
+        <h2>html head : import the AX5UI-Combobox javascript file.</h2>
+<p>insert import 'ax5ui-combobox' link at html head tag.
+<br/></p>
+<pre class="prettyprint linenums lang-js"><code>&lt;head&gt;
+&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;src/ax5ui-combobox/dist/ax5combobox.css&quot;&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;src/ax5ui-combobox/dist/ax5combobox.min.js&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;
+</code></pre>
+<br/>
+<h2>html body</h2>
+<pre class="prettyprint linenums lang-js"><code>&lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col-md-6&quot;&gt;
+        &lt;div class=&quot;form-group&quot;&gt;
+            &lt;div data-ax5combobox=&quot;combobox1&quot; data-ax5combobox-config=&quot;{size:'sm'}&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col-md-6&quot;&gt;
+        &lt;div class=&quot;form-group&quot;&gt;
+            &lt;div data-ax5combobox=&quot;combobox2&quot; data-ax5combobox-config=&quot;{
+                             size:'lg',
+                             multiple: true
+                             }&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<br/>
+<h2>java script</h2>
+<p>define the action when method called.</p>
+<pre class="prettyprint linenums lang-js"><code>&lt;script type=&quot;text/javascript&quot;&gt;
+    var options = [];
+    options.push({value: &quot;string&quot;, text: &quot;string&quot;});
+    options.push({value: &quot;number&quot;, text: &quot;number&quot;});
+    options.push({value: &quot;substr&quot;, text: &quot;substr&quot;});
+    options.push({value: &quot;substring&quot;, text: &quot;substring&quot;});
+    options.push({value: &quot;search&quot;, text: &quot;search&quot;});
+    options.push({value: &quot;parseInt&quot;, text: &quot;parseInt&quot;});
+    options.push({value: &quot;toFixed&quot;, text: &quot;toFixed&quot;});
+    options.push({value: &quot;min&quot;, text: &quot;min&quot;});
+    options.push({value: &quot;max&quot;, text: &quot;max&quot;});
+
+    $(document.body).ready(function () {
+        $('[data-ax5combobox]').ax5combobox({
+            options: options
+        });
     });
-});
+&lt;/script&gt;
 </code></pre>
-<hr>
-<h3>Preview</h3>
-<ul>
-<li><a href="http://ax5.io/ax5ui-dialog/demo/index.html">See Demostration</a></li>
-</ul>
-<p>If you have any questions, please refer to the following <a href="https://github.com/ax5ui/ax5ui-kernel">gitHub</a></p>
-
+<br/>
+<p>if you set the multiple value 'true', you can select more than one options.
+<br/><br/></p>
+<p>if you want to know more, please click <a href="http://ax5.io/ax5ui-combobox/api/index.html">here.</a></p>
 
 
     

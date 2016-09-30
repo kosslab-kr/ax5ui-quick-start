@@ -1,20 +1,22 @@
-<tmpl-metadata parentId="step-01" parentTitle="Step.01" sort="102" id="gulp" title="gulp" desc="" />
-
-
+<tmpl-metadata parentId="temp" parentTitle="Temp" sort="3" id="youtube" title="Youtube" desc="" />
 
 <layout-use template="${data.layoutPath}" parent-id="${data.metadata.parentId}" page-id="${data.metadata.id}" body-style="sub-page" with-menu="true">
     <layout-put into="visual">
         <div class="contents">
             <div class="style-sub-visual">
                 <div class="title">${data.metadata.title}</div>
-                <div class="description">gulp와 gulp를 설치하는 방법에 대해 알아봅시다.</div>
+                <div class="description">MarkdownTutorial</div>
             </div>
         </div>
     </layout-put>
     <layout-put into="body">
 
         <ax5docs-md>
-            # gulp
+            # MarkdownTutorial/SDU
+        </ax5docs-md>
+
+        <ax5docs-md file = "${data.mdpath}/SDU/markdownTutorial.md">
+            test
         </ax5docs-md>
 
 
