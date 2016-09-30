@@ -1,0 +1,27 @@
+<tmpl-metadata parentId="step-00" parentTitle="Step.0" sort="4" id="db" title="Database" desc="" />
+
+
+<layout-use template="${data.layoutPath}" parent-id="${data.metadata.parentId}" page-id="${data.metadata.id}" body-style="sub-page" with-menu="true">
+    <layout-put into="visual">
+        <div class="contents">
+            <div class="style-sub-visual">
+                <div class="title">${data.metadata.title}</div>
+                <div class="description">데이터베이스에 대해 알아봅시다.</div>
+            </div>
+        </div>
+    </layout-put>
+    <layout-put into="body">
+
+        <ax5docs-md>
+            # Database
+        </ax5docs-md>
+
+        <ax5docs-md file="${data.mdpath}/KDW/database.md">
+
+        </ax5docs-md>
+
+    </layout-put>
+    <layout-put into="page-js">
+
+    </layout-put>
+</layout-use>

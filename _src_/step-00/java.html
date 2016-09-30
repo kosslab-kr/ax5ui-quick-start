@@ -1,5 +1,4 @@
-<tmpl-metadata parentId="step-00" parentTitle="Step.0" sort="1" id="index" title="Hello world!" desc="" />
-
+<tmpl-metadata parentId="step-00" parentTitle="Step.0" sort="3" id="java" title="Java" desc="" />
 
 
 <layout-use template="${data.layoutPath}" parent-id="${data.metadata.parentId}" page-id="${data.metadata.id}" body-style="sub-page" with-menu="true">
@@ -7,24 +6,19 @@
         <div class="contents">
             <div class="style-sub-visual">
                 <div class="title">${data.metadata.title}</div>
-                <div class="description">hello~</div>
+                <div class="description">자바에 대해 알아봅시다.</div>
             </div>
         </div>
     </layout-put>
     <layout-put into="body">
 
         <ax5docs-md>
-            # TestPage/step0
+            # Java
         </ax5docs-md>
 
-        <ax5docs-md>
-          ```
-          hello world!
-          ```
+        <ax5docs-md file="${data.mdpath}/KDW/java.md">
+
         </ax5docs-md>
-        <ax5docs-html run="true">
-          <a href="http://guide.ax5.io/">guide.ax5.io</a>
-        </ax5docs-html>
 
     </layout-put>
     <layout-put into="page-js">
