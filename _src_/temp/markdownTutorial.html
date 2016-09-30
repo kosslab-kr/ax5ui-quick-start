@@ -1,20 +1,24 @@
-<tmpl-metadata parentId="step-03" parentTitle="Step.03" sort="311" id="layout" title="ax5ui-layout" desc="" />
-
+<tmpl-metadata parentId="temp" parentTitle="Temp" sort="3" id="youtube" title="Youtube" desc="" />
 
 <layout-use template="${data.layoutPath}" parent-id="${data.metadata.parentId}" page-id="${data.metadata.id}" body-style="sub-page" with-menu="true">
     <layout-put into="visual">
         <div class="contents">
             <div class="style-sub-visual">
                 <div class="title">${data.metadata.title}</div>
-                <div class="description">layout 기능에 대해 알아봅시다.</div>
+                <div class="description">MarkdownTutorial</div>
             </div>
         </div>
     </layout-put>
     <layout-put into="body">
 
         <ax5docs-md>
-            # ax5ui-layout
+            # MarkdownTutorial/SDU
         </ax5docs-md>
+
+        <ax5docs-md file = "${data.mdpath}/SDU/markdownTutorial.md">
+            test
+        </ax5docs-md>
+
 
     </layout-put>
     <layout-put into="page-js">

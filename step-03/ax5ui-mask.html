@@ -2,7 +2,6 @@
 
 
 
-
     
     
     
@@ -103,7 +102,7 @@
                         <ul class="nav navbar-nav" id="docs-menu-print-target">
                             
                             
-                                <li ><a href="\step-00\editing-tool.html">Step.0</a></li><li ><a href="\step-01\npm.html">Step.01</a></li><li ><a href="\step-02\kernel-info.html">Step.02</a></li><li class='active'><a href="\step-03\ax5ui-mask.html">Step.03</a></li>
+                                <li ><a href="\step-00\editing-tool.html">Step.0</a></li><li ><a href="\temp\markdownTutorial.html">Temp</a></li><li ><a href="\step-01\npm.html">Step.01</a></li><li ><a href="\step-02\kernel-info.html">Step.02</a></li><li class='active'><a href="\step-03\ax5ui-mask.html">Step.03</a></li>
                             
                         </ul>
 
@@ -176,53 +175,7 @@
     <code>Mask effect will disappear after 2seconds.<br>
   </code></p>
 
-
-        <ul>
-<li>
-<h3>html head : import the AX5UI-mask javascript file.</h3>
-</li>
-</ul>
-<p>insert import 'ax5ui-mask' link at html head tag.</p>
-<pre class="prettyprint linenums lang-html"><code>&lt;head&gt;
-&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.rawgit.com/ax5ui/ax5ui-mask/master/dist/ax5mask.css&quot; /&gt;
-&lt;script type=&quot;text/javascript&quot; src=&quot;https://code.jquery.com/jquery-1.12.3.min.js&quot;&gt;&lt;/script&gt;
-&lt;script type=&quot;text/javascript&quot; src=&quot;https://cdn.rawgit.com/ax5ui/ax5core/master/dist/ax5core.min.js&quot;&gt;&lt;/script&gt;
-&lt;script type=&quot;text/javascript&quot; src=&quot;https://cdn.rawgit.com/ax5ui/ax5ui-mask/master/dist/ax5mask.min.js&quot;&gt;&lt;/script&gt;
-&lt;/head&gt;
-</code></pre>
-<br>
-<ul>
-<li>
-<h3>html body : make button to call the mask function.</h3>
-</li>
-</ul>
-<p>make button to call 'ax5ui-mask' method.</p>
-<pre class="prettyprint linenums lang-html"><code>&lt;body&gt;
-&lt;button id=&quot;mask-open&quot; type=&quot;button&quot;&gt;Button&lt;/button&gt;
-&lt;/body&gt;
-</code></pre>
-<br>
-<ul>
-<li>
-<h3>java script : bind the action with button.</h3>
-</li>
-</ul>
-<p>define the   action when method called.</p>
-<pre class="prettyprint linenums lang-js"><code>&lt;script type=&quot;text/javascript&quot;&gt;
-    $(document.body).ready(function () {
-        var mask = new ax5.ui.mask();
-        $('#mask-open').click(function () {
-            mask.open();
-
-            setTimeout(function () {
-                mask.close();
-            }, 2000);
-        });
-
-    });
-&lt;/script&gt;
-</code></pre>
-
+        
 
     <p>
       <code>if you want to change the duration, adjust number on setTimeout. 1000 means 1s </code>

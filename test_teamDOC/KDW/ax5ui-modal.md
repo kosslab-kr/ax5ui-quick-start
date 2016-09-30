@@ -61,3 +61,8 @@ The first argument of modal.open in the example, the set value (object), the sec
 The second argument's 'this' directive contains modal attribute state, width, height and $ attributes.
 
 By using the passed jQuery object, it is possible to extend the desired function freely.
+
+
+## Demo/youtube
+
+@[youtube](https://www.youtube.com/watch?v=67vptcseFqM)
