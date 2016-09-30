@@ -5,8 +5,8 @@ exports.render = function (input, out) {
               linkify: true,
               typography: true
             }).use(require('markdown-it-video', { // <-- this use(package_name) is required
-              youtube: { width: 500, height: 281 },
-              vimeo: { width: 500, height: 281 },
+              youtube: { width: 160, height: 90 },
+              vimeo: { width: 230, height: 100 },
               vine: { width: 600, height: 600, embed: 'simple' },
               prezi: { width: 550, height: 400 }
             }));
